@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优秀毕业生 - 高州市第二中学</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        'primary-light': '#3B82F6',
+                        'primary-lighter': '#93C5FD',
+                        danger: '#DC2626',
+                        success: '#10B981',
+                        warning: '#F59E0B',
+                        light: '#F3F4F6',
+                        gray: '#9CA3AF',
+                        dark: '#374151',
+                        darker: '#111827'
+                    },
+                    fontFamily: {
+                        sans: ['"Microsoft YaHei"', '"微软雅黑"', '"Segoe UI"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .nav-link {
+                position: relative;
+            }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: white;
+                transition: width 0.3s ease;
+            }
+            .nav-link:hover::after,
+            .nav-link.active::after {
+                width: 100%;
+            }
+            .category-active {
+                background-color: #1E3A8A;
+                color: white;
+            }
+            .category-active:hover {
+                background-color: #3B82F6 !important;
+                color: white !important;
+            }
+            .graduate-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            }
+            .graduate-photo {
+                transition: transform 0.3s ease;
+            }
+            .graduate-card:hover .graduate-photo {
+                transform: scale(1.05);
+            }
+            .featured-graduate {
+                border-left: 4px solid #1E3A8A;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light font-sans text-dark">
+    <!-- 顶部导航栏 -->
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4">
+            <!-- 学校Logo和标题 -->
+            <div class="flex items-center justify-between py-3">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-3">
+                        <span class="text-primary text-2xl font-bold">
+                            <img src="a.png" alt="学校Logo" class="w-11 h-11">
+                        </span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">高州市第二中学</h1>
+                        <p class="text-xs text-primary-lighter">Gaozhou No.2 Middle School</p>
+                    </div>
+                </div>
+                
+                <!-- 搜索框 -->
+                <div class="hidden md:block">
+                    <div class="relative">
+                        <input type="text" placeholder="搜索信息..." class="w-64 h-9 pl-3 pr-10 rounded-md bg-white/20 focus:bg-white/30 focus:outline-none text-sm">
+                        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 主导航菜单 -->
+            <nav class="py-3 border-t border-primary-light/30">
+                <ul class="flex flex-wrap">
+                    <li class="mr-8">
+                        <a href="home.html" class="nav-link text-white hover:text-primary-lighter transition-colors block py-1">首页</a>
+                    </li>
+                    <li class="mr-8">
+                        <a href="news.html" class="nav-link text-white hover:text-primary-lighter transition-colors block py-1">新闻公告</a>
+                    </li>
+                    <li class="mr-8">
+                        <a href="about.html" class="nav-link text-white hover:text-primary-lighter transition-colors block py-1">学校简介</a>
+                    </li>
+                    <li class="mr-8">
+                        <a href="admission.html" class="nav-link text-white hover:text-primary-lighter transition-colors block py-1">招生信息</a>
+                    </li>
+                    <li class="mr-8">
+                        <a href="#" class="nav-link text-white hover:text-primary-lighter transition-colors block py-1">师资力量</a>
+                    </li>
+                    <li class="mr-8">
+                        <a href="#" class="nav-link text-white hover:text-primary-lighter transition-colors block py-1">校园活动</a>
+                    </li>
+                    <li class="mr-8">
+                        <a href="campus-facilities.html" class="nav-link text-white hover:text-primary-lighter transition-colors block py-1">资源中心</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="nav-link text-white hover:text-primary-lighter transition-colors block py-1">联系我们</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题栏 -->
+    <div class="bg-white py-4 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center">
+                <h2 class="text-xl font-bold text-primary">优秀毕业生</h2>
+                <div class="ml-4 text-sm text-gray">
+                    <a href="home.html" class="hover:text-primary">首页</a>
+                    <span class="mx-2">/</span>
+                    <a href="about.html" class="hover:text-primary">学校简介</a>
+                    <span class="mx-2">/</span>
+                    <span>优秀毕业生</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容区 -->
+    <main class="container mx-auto px-4 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- 左侧边栏 -->
+            <aside class="lg:col-span-1">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="p-4 bg-primary text-white">
+                        <h3 class="font-bold">毕业生筛选</h3>
+                    </div>
+                    <div class="p-2">
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded-t-lg category-active">
+                            <i class="fa fa-graduation-cap mr-2"></i>全部毕业生
+                        </button>
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded">
+                            <i class="fa fa-university mr-2"></i>985/211高校
+                        </button>
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded">
+                            <i class="fa fa-flask mr-2"></i>理工类
+                        </button>
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded">
+                            <i class="fa fa-balance-scale mr-2"></i>文史类
+                        </button>
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded">
+                            <i class="fa fa-heartbeat mr-2"></i>医学类
+                        </button>
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded">
+                            <i class="fa fa-calculator mr-2"></i>财经类
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden mt-6">
+                    <div class="p-4 bg-primary text-white">
+                        <h3 class="font-bold">按年份查看</h3>
+                    </div>
+                    <div class="p-2">
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded-t-lg">
+                            <i class="fa fa-calendar mr-2"></i>2024届
+                        </button>
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded">
+                            <i class="fa fa-calendar mr-2"></i>2023届
+                        </button>
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded">
+                            <i class="fa fa-calendar mr-2"></i>2022届
+                        </button>
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded">
+                            <i class="fa fa-calendar mr-2"></i>2021届
+                        </button>
+                        <button class="w-full text-left px-4 py-3 border-b border-light hover:bg-light rounded">
+                            <i class="fa fa-calendar mr-2"></i>2020届
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 右侧主内容区 -->
+            <div class="lg:col-span-3">
+                <!-- 毕业生风采 -->
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden mb-6">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="q.webp" alt="优秀毕业生" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="text-2xl font-bold mb-2">优秀毕业生风采</h3>
+                                <p class="text-sm opacity-90">桃李芬芳，硕果累累</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 md:p-8">
+                        <p class="mb-6 text-justify">高州市第二中学自建校以来，培养了大批优秀毕业生。他们遍布全国各大高校，在各自领域取得了优异成绩。学校以"立德树人"为根本任务，致力于培养德智体美劳全面发展的社会主义建设者和接班人。</p>
+                        
+                        <div class="bg-primary/5 p-6 rounded-lg mb-8 featured-graduate">
+                            <div class="flex flex-col md:flex-row items-start">
+                                <div class="md:w-1/3 mb-4 md:mb-0 md:pr-6">
+                                    <div class="w-full h-64 rounded-lg overflow-hidden">
+                                        <img src="tian.jpg" alt="张晓聪" class="w-full h-full object-cover graduate-photo">
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3">
+                                    <h3 class="text-xl font-bold mb-2 text-primary">汤耀添</h3>
+                                    <div class="mb-4">
+                                        <span class="inline-block bg-primary text-white text-sm px-3 py-1 rounded-full mr-2">2023届毕业生</span>
+                                        <span class="inline-block bg-primary-light text-white text-sm px-3 py-1 rounded-full">下北泽大学</span>
+                                    </div>
+                                    <p class="mb-4">汤耀添，24岁，是学生（兼职红茶品鉴师）。我校2023届优秀毕业生，毕业于下北泽高级中学，以优异的成绩考入下北泽大学，目前就读于先辈文化研究专业。兴趣爱好是品鉴昏睡红茶、聆听《冬の花》、在阳台上晒太阳。口头禅是"压力马斯内！"（いいですね！/好啊！）。人生目标是成为一名优秀的红茶商人，让全世界都能品尝到正宗的下北泽红茶。</p>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                        <div>
+                                            <h4 class="font-semibold mb-2 flex items-center">
+                                                <i class="fa fa-trophy text-warning mr-2"></i>先辈荣誉
+                                            </h4>
+                                            <ul class="list-disc pl-5 text-sm">
+                                                <li>下北泽红茶品鉴114级证书</li>
+                                                <li>广东省野兽先辈称号</li>
+                                                <li>校级昏睡大师</li>
+                                                <li>《冬の花》演唱大赛1919等奖</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold mb-2 flex items-center">
+                                                <i class="fa fa-heart text-danger mr-2"></i>先辈特质
+                                            </h4>
+                                            <ul class="list-disc pl-5 text-sm">
+                                                <li>24岁，是学生，善于品鉴红茶</li>
+                                                <li>压力马斯内，团结野兽</li>
+                                                <li>积极参加更衣室交流活动</li>
+                                                <li>有较强的昏睡红茶调配能力</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg border border-primary/20">
+                                        <h4 class="font-semibold mb-2 flex items-center">
+                                            <i class="fa fa-quote-left text-primary mr-2"></i>先辈感言
+                                        </h4>
+                                        <p class="text-sm italic">"逸一时，误一世，逸久逸久罢已龄！在下北泽高级中学的三年是我人生中最重要的成长阶段。感谢先辈们的悉心教导和野兽们的陪伴支持，让我不仅在红茶品鉴上取得了进步，更在昏睡技巧上得到了全面提升。我将永远铭记母校'压力、马斯内、昏睡、红茶'的校训，在新的学习环境中继续努力，让全世界都能品尝到正宗的下北泽红茶！你是一个一个一个...优秀毕业生啊啊啊啊！"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-primary">其他优秀毕业生</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            牛头宇
+                            小邓伙计
+                            .....
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white mt-12">
+        <div class="container mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">学校概况</h3>
+                    <ul class="space-y-2 text-sm text-primary-lighter">
+                        <li><a href="about.html" class="hover:text-white transition-colors">学校简介</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">历史沿革</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">办学理念</a></li>
+                        <li><a href="campus-facilities.html" class="hover:text-white transition-colors">校园设施</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">荣誉成就</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">教育教学</h3>
+                    <ul class="space-y-2 text-sm text-primary-lighter">
+                        <li><a href="#" class="hover:text-white transition-colors">师资力量</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">教学成果</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">课程设置</a></li>
+                        <li><a href="admission.html" class="hover:text-white transition-colors">招生信息</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">校园活动</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">资源服务</h3>
+                    <ul class="space-y-2 text-sm text-primary-lighter">
+                        <li><a href="#" class="hover:text-white transition-colors">资源中心</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">图书馆</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">校历查询</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">联系我们</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">常见问题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-3 text-sm text-primary-lighter">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-3"></i>
+                            <span>广东省茂名市高州市文明路123号</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-3"></i>
+                            <span>0668-1234567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope mr-3"></i>
+                            <span>info@gz2z.edu.cn</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-clock-o mr-3"></i>
+                            <span>工作日: 8:00-17:30</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 flex space-x-3">
+                        <a href="#" class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-primary-light/30 text-center text-sm text-primary-lighter">
+                <p>Copyright © 2025 高州市第二中学. 粤ICP备12345678号</p>
+                <p class="mt-2">设计开发：高州市第二中学信息中心</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 分类切换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.p-2 button');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮的激活状态
+                    categoryButtons.forEach(btn => btn.classList.remove('category-active'));
+                    // 添加当前按钮的激活状态
+                    this.classList.add('category-active');
+                    
+                    // 这里可以添加加载对应内容的逻辑
+                    console.log('切换到：', this.textContent.trim());
+                });
+            });
+        });
+    </script>
+</body>
+</html>
